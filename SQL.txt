@@ -1,0 +1,15 @@
+Предположим, что существует три таблицы: 
+products - данные о продуктах
+categories - данные о категориях
+products_catergories - таблица связей между продуктами и категориями 
+
+Тогда запрос будет выглядеть следующим образом:
+select *
+from products as p
+left join products_categories as pc on p.ID = pc.productID
+left join categories as c on pc.categoryID = c.ID
+
+
+
+
+
